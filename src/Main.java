@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -7,11 +8,19 @@ public class Main extends JFrame implements ActionListener {
         new Main();
     }
     
+    northPanel northPanel = new northPanel();
+    JPanel centerPanel = new JPanel(new GridLayout(4,4));
+    southPanel southPanel = new southPanel();
     
     
     
     Main(){
-        
+        setLayout(new BorderLayout());
+        add(northPanel, BorderLayout.NORTH);
+        add(centerPanel, BorderLayout.CENTER);
+        add(southPanel, BorderLayout.SOUTH);
+
+        northPanel.newGameButton.addActionListener(this);
         
         
         pack();
@@ -23,6 +32,16 @@ public class Main extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        if(e.getSource() == northPanel.newGameButton){
+            southPanel.moveCounter ++;
+            southPanel.moveCounterPanel.setText(String.valueOf(southPanel.moveCounter));
+            if (southPanel.timer.isRunning()) {
+                southPanel.timer.stop();
+                
+            } else {
+                southPanel.running = true;
+                southPanel.timer.start();
+            }
+        }
     }
 }
