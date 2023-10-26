@@ -3,7 +3,6 @@ import java.awt.*;
 
 public class GameInterface extends JFrame {
 
-
     JPanel p = new JPanel();
     JButton B1 = new JButton();
     JButton B2 = new JButton();
@@ -25,22 +24,10 @@ public class GameInterface extends JFrame {
     GameInterface() {
         add(p);
         p.setLayout(new GridLayout(4, 4));
-        p.add(B1);
-        p.add(B2);
-        p.add(B3);
-        p.add(B4);
-        p.add(B5);
-        p.add(B6);
-        p.add(B7);
-        p.add(B8);
-        p.add(B9);
-        p.add(B10);
-        p.add(B11);
-        p.add(B12);
-        p.add(B13);
-        p.add(B14);
-        p.add(B15);
-        p.add(B16);
+        p.add(B1);p.add(B2);p.add(B3);p.add(B4);
+        p.add(B5);p.add(B6);p.add(B7);p.add(B8);
+        p.add(B9);p.add(B10);p.add(B11);p.add(B12);
+        p.add(B13);p.add(B14);p.add(B15);p.add(B16);
         setLocationRelativeTo(null);
         setSize(500, 500);
         setVisible(true);
