@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first commit and push" />
+    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first commit and push">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="AndreasBranch" />
+        <entry key="$PROJECT_DIR$" value="Development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,8 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "FelixDevelopment",
-    "last_opened_file_path": "C:/Users/felix/IdeaProjects/GameOfFifteen",
+    "git-widget-placeholder": "Johans-Branch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,8 +50,8 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="GameInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameInterface" />
       <module name="GameOfFifteen" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -58,7 +59,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GameInterface" />
       </list>
     </recent_temporary>
   </component>
@@ -71,7 +72,6 @@
       <option name="presentableId" value="Default" />
       <updated>1698331606786</updated>
       <workItem from="1698331607913" duration="1271000" />
-      <workItem from="1698386735559" duration="1225000" />
     </task>
     <task id="LOCAL−00001" summary="first commit and push">
       <option name="closed" value="true" />
@@ -80,14 +80,7 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1698331770104</updated>
     </task>
-    <task id="LOCAL−00002" summary="GameInterface and buttons">
-      <option name="closed" value="true" />
-      <created>1698387910649</created>
-      <option name="number" value="LOCAL−00002" />
-      <option name="presentableId" value="LOCAL−00002" />
-      <updated>1698387910649</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,7 +99,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit and push" />
-    <MESSAGE value="GameInterface and buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="GameInterface and buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit and push" />
   </component>
 </project>
