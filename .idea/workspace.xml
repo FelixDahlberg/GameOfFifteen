@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="Ändrade changeColorOnNumbers">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-27_08_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-27_08_30__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="Ändrade lite i forloopen i centerPanel">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/centerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/centerPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +115,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1698390446745</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Ändrade lite i forloopen i centerPanel">
+      <option name="closed" value="true" />
+      <created>1698392896348</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1698392896348</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +143,7 @@
     <MESSAGE value="first commit and push" />
     <MESSAGE value="jdk17 added" />
     <MESSAGE value="Ändrade changeColorOnNumbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ändrade changeColorOnNumbers" />
+    <MESSAGE value="Ändrade lite i forloopen i centerPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ändrade lite i forloopen i centerPanel" />
   </component>
 </project>
