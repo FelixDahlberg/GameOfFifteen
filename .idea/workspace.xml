@@ -39,7 +39,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Development",
+    "git-widget-placeholder": "FelixDevelopment",
+    "last_opened_file_path": "C:/Users/felix/IdeaProjects/GameOfFifteen",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698331606786</updated>
       <workItem from="1698331607913" duration="1271000" />
+      <workItem from="1698386735559" duration="1225000" />
     </task>
     <task id="LOCAL−00001" summary="first commit and push">
       <option name="closed" value="true" />
@@ -78,14 +80,33 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1698331770104</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="GameInterface and buttons">
+      <option name="closed" value="true" />
+      <created>1698387910649</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1698387910649</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit and push" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit and push" />
+    <MESSAGE value="GameInterface and buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameInterface and buttons" />
   </component>
 </project>
