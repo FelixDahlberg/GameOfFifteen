@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Collections;
 
 public class Main extends JFrame implements ActionListener {
     public static void main(String[] args) {
@@ -14,6 +15,7 @@ public class Main extends JFrame implements ActionListener {
 
 
     Main() {
+        setTitle("Game Of Fifteen");
         setLayout(new BorderLayout());
         add(northPanel, BorderLayout.NORTH);
         add(centerPanel, BorderLayout.CENTER);
@@ -24,8 +26,6 @@ public class Main extends JFrame implements ActionListener {
         northPanel.changeColorOnNumbersButton.addActionListener(this);
 
         southPanel.timer.start();
-        centerPanel.dimensionArray[0][0].setText(" ");
-        centerPanel.dimensionArray[0][0].setVisible(false);
 
         centerPanel.dimensionArray[0][0].addActionListener(this);
         centerPanel.dimensionArray[0][1].addActionListener(this);
@@ -58,7 +58,7 @@ public class Main extends JFrame implements ActionListener {
     }
 
     public void shuffleGame() {
-
+        
     }
 
     public void moveTile(int a, int b) {
@@ -183,7 +183,7 @@ public class Main extends JFrame implements ActionListener {
                     }
                 }
             }
-        }else{
+        } else {
             if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
                 moveDown(a, b);
                 updateMoveCounter();
@@ -227,18 +227,15 @@ public class Main extends JFrame implements ActionListener {
         centerPanel.dimensionArray[a][b].setText(" ");
         centerPanel.dimensionArray[a][b].setVisible(false);
     }
-    
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == northPanel.newGameButton) {
-            if (southPanel.timer.isRunning()) {
-                southPanel.timer.stop();
+            shuffleGame();
+            southPanel.seconds = 0;
+            southPanel.timer.start();
 
-            } else {
-                southPanel.running = true;
-                southPanel.timer.start();
-            }
         }
         if (e.getSource() == northPanel.changeColorOnGameButton) {
             Color colorSelector = JColorChooser.showDialog(null, "Välj en färg på spelplanen", Color.BLACK);
@@ -307,6 +304,5 @@ public class Main extends JFrame implements ActionListener {
         if (e.getSource() == centerPanel.dimensionArray[3][3]) {
             moveTile(3, 3);
         }
-
     }
 }

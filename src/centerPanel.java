@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class centerPanel extends JPanel {
     
@@ -19,13 +20,18 @@ public class centerPanel extends JPanel {
         }
 
         setLayout(new GridLayout(4, 4));
-
+        
         for (int i = 0; i < 16; i++) {
             JButton boardNumbers = new JButton(String.valueOf(i + 1));
             boardNumbers.setPreferredSize(new Dimension(80, 80));
-            add(boardNumbers);
             buttonList.add(boardNumbers);
         }
+
+        Collections.shuffle(buttonList);
+        for (JButton b:buttonList) {
+            add(b);
+        }
+        
         
         int numberOfButtons = 0;
         for (int i = 0; i < rows; i++) {
@@ -34,5 +40,7 @@ public class centerPanel extends JPanel {
                 numberOfButtons++;
             }
         }
+        dimensionArray[3][3].setText(" ");
+        dimensionArray[3][3].setVisible(false);
     }
 }
