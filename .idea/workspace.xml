@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first cast">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first commit and push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/northPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/northPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +21,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="Johans-Branch" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -45,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Development",
+    "git-widget-placeholder": "AndreasBranch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,7 +52,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GameInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameInterface" />
       <module name="GameOfFifteen" />
@@ -61,8 +60,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="GameOfFifteen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.GameInterface" />
       </list>
     </recent_temporary>
@@ -84,12 +91,12 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1698331770104</updated>
     </task>
-    <task id="LOCAL−00002" summary="first cast">
+    <task id="LOCAL−00002" summary="jdk17 added">
       <option name="closed" value="true" />
-      <created>1698388123083</created>
+      <created>1698388339876</created>
       <option name="number" value="LOCAL−00002" />
       <option name="presentableId" value="LOCAL−00002" />
-      <updated>1698388123083</updated>
+      <updated>1698388339876</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -110,7 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit and push" />
-    <MESSAGE value="first cast" />
-    <option name="LAST_COMMIT_MESSAGE" value="first cast" />
+    <MESSAGE value="jdk17 added" />
+    <option name="LAST_COMMIT_MESSAGE" value="jdk17 added" />
   </component>
 </project>

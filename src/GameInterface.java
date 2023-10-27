@@ -8,13 +8,22 @@ public class GameInterface extends JFrame implements ActionListener {
     JPanel panel = new JPanel();
     JPanel southPanel = new JPanel();
     JPanel northPanel = new JPanel();
+    
+    JButton changeSizeButton = new JButton("Byt storlek till 3x3");
+    
     JButton emptyButton = new JButton(" ");
     int rows = 4;
     int colums = 4;
     JButton[][] dimensionArray = new JButton[rows][colums];
 
     public GameInterface() {
-        
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         this.add(panel);
         panel.setLayout(new BorderLayout());
         southPanel.setLayout(new GridLayout(4, 4));
@@ -22,6 +31,7 @@ public class GameInterface extends JFrame implements ActionListener {
         panel.add(northPanel, BorderLayout.NORTH);
         panel.add(southPanel, BorderLayout.SOUTH);
         
+        northPanel.add(changeSizeButton);
 
         for (int i = 0; i < 15; i++) {
             JButton boardNumbers = new JButton(String.valueOf(i + 1));
@@ -36,6 +46,11 @@ public class GameInterface extends JFrame implements ActionListener {
 
         southPanel.add(emptyButton);
         emptyButton.setBackground(Color.BLACK);
+
+
+        emptyButton.addActionListener(this);
+        changeSizeButton.addActionListener(this);
+        
 
         pack();
         setVisible(true);
@@ -60,8 +75,6 @@ public class GameInterface extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        } 
-        
+    }
 
-        }
-    
+}
