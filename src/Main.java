@@ -49,6 +49,7 @@ public class Main extends JFrame implements ActionListener {
             Color colorSelector = JColorChooser.showDialog(null, "Välj en färg på spelplanen", Color.BLACK);
             if (colorSelector != null) {
                 northPanel.setBackground(colorSelector);
+                centerPanel.setBackground(colorSelector);
                 southPanel.setBackground(colorSelector);
             }
         }
