@@ -9,7 +9,7 @@ public class Main extends JFrame implements ActionListener {
     }
     
     northPanel northPanel = new northPanel();
-    JPanel centerPanel = new JPanel(new GridLayout(4,4));
+    centerPanel centerPanel = new centerPanel();
     southPanel southPanel = new southPanel();
     
     
@@ -55,7 +55,7 @@ public class Main extends JFrame implements ActionListener {
         if (e.getSource() == northPanel.changeColorOnNumbersButton) {
             Color colorSelectorNumbers = JColorChooser.showDialog(null, "Välj en färg på brickorna", Color.WHITE);
             if (colorSelectorNumbers != null) {
-                Component[] comps = southPanel.getComponents();
+                Component[] comps = centerPanel.getComponents();
                 for (Component comp : comps) {
                     if (comp instanceof JButton) {
                         JButton b = (JButton) comp;
