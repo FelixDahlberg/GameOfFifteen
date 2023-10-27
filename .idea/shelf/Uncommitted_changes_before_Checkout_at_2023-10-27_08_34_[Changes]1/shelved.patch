@@ -1,0 +1,85 @@
+Index: src/GameInterface.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\npublic class GameInterface extends JFrame implements ActionListener {\r\n\r\n    JPanel panel = new JPanel();\r\n    JPanel southPanel = new JPanel();\r\n    JPanel northPanel = new JPanel();\r\n    JButton playButton = new JButton(\"Nytt spel\");\r\n    JButton changeColorOnGameButton = new JButton(\"Byt färg på spelaplanen\");\r\n    JButton changeSizeButton = new JButton(\"Byt storlek till 3x3\");\r\n    JButton changeColorOnNumbersButton = new JButton(\"Byt färg på brickorna\");\r\n    JButton emptyButton = new JButton(\" \");\r\n    int rows = 4;\r\n    int colums = 4;\r\n    JButton[][] dimensionArray = new JButton[rows][colums];\r\n\r\n    public GameInterface() {\r\n        try {\r\n            UIManager.setLookAndFeel(\"javax.swing.plaf.nimbus.NimbusLookAndFeel\");\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n\r\n\r\n        this.add(panel);\r\n        panel.setLayout(new BorderLayout());\r\n        southPanel.setLayout(new GridLayout(4, 4));\r\n        northPanel.setLayout(new FlowLayout());\r\n        panel.add(northPanel, BorderLayout.NORTH);\r\n        panel.add(southPanel, BorderLayout.SOUTH);\r\n\r\n        northPanel.add(playButton);\r\n        northPanel.add(changeColorOnGameButton);\r\n        northPanel.add(changeSizeButton);\r\n        northPanel.add(changeColorOnNumbersButton);\r\n\r\n        for (int i = 0; i < 15; i++) {\r\n            JButton boardNumbers = new JButton(String.valueOf(i + 1));\r\n            boardNumbers.setPreferredSize(new Dimension(80, 80));\r\n            southPanel.add(boardNumbers);\r\n\r\n        }\r\n\r\n\r\n        northPanel.setBackground(Color.WHITE);\r\n\r\n\r\n        southPanel.add(emptyButton);\r\n        emptyButton.setBackground(Color.BLACK);\r\n\r\n\r\n        emptyButton.addActionListener(this);\r\n        playButton.addActionListener(this);\r\n        changeColorOnGameButton.addActionListener(this);\r\n        changeSizeButton.addActionListener(this);\r\n        changeColorOnNumbersButton.addActionListener(this);\r\n\r\n        pack();\r\n        setVisible(true);\r\n        setLocationRelativeTo(null);\r\n        setDefaultCloseOperation(EXIT_ON_CLOSE);\r\n\r\n\r\n    }\r\n\r\n    private static void addButtonsToPanel(JPanel panel) {\r\n        for (int i = 0; i < panel.getComponentCount(); i++) {\r\n            JButton button = new JButton(String.valueOf(i + 1));\r\n            panel.add(button);\r\n        }\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        GameInterface g = new GameInterface();\r\n\r\n    }\r\n\r\n    @Override\r\n    public void actionPerformed(ActionEvent e) {\r\n        if (e.getSource() == changeColorOnGameButton) {\r\n            Color colorSelector = JColorChooser.showDialog(null, \"Välj en färg på spelplanen\", Color.BLACK);\r\n            if (colorSelector != null) {\r\n                northPanel.setBackground(colorSelector);\r\n            }\r\n\r\n        } else if (e.getSource() == changeColorOnNumbersButton) {\r\n            Color colorSelectorNumbers = JColorChooser.showDialog(null, \"Välj en färg på brickorna\", Color.WHITE);\r\n            if (colorSelectorNumbers != null) {\r\n                Component[] comps = southPanel.getComponents();\r\n                for (Component comp : comps) {\r\n                    if (comp instanceof JButton) {\r\n                        JButton b = (JButton) comp;\r\n                        b.setBackground(colorSelectorNumbers);\r\n                    }\r\n                }\r\n            }\r\n        } else if (e.getSource() == changeSizeButton) {\r\n            String input = JOptionPane.showInputDialog(null, \"Ange storlek (t.ex. 3 för 3x3, 5 för 5x5, osv):\");\r\n            try {\r\n                int size = Integer.parseInt(input);\r\n                if (size > 1 && size <= 10) {\r\n                    southPanel.removeAll();\r\n                    southPanel.setLayout(new GridLayout(size, size));\r\n                    addButtonsToPanel(southPanel);\r\n                    pack();\r\n                } else {\r\n                    JOptionPane.showMessageDialog(null, \"Storleken måste vara mellan 2 och 10.\");\r\n                }\r\n            } catch (NumberFormatException ex) {\r\n                JOptionPane.showMessageDialog(null, \"Ogiltigt inmatningsformat. Ange en siffra.\");\r\n            }\r\n        } else if (e.getSource() == playButton) {\r\n\r\n        }\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GameInterface.java b/src/GameInterface.java
+--- a/src/GameInterface.java	
++++ b/src/GameInterface.java	
+@@ -10,7 +10,7 @@
+     JPanel northPanel = new JPanel();
+     JButton playButton = new JButton("Nytt spel");
+     JButton changeColorOnGameButton = new JButton("Byt färg på spelaplanen");
+-    JButton changeSizeButton = new JButton("Byt storlek till 3x3");
++    JButton changeSizeButton = new JButton("Byt storlek på planen");
+     JButton changeColorOnNumbersButton = new JButton("Byt färg på brickorna");
+     JButton emptyButton = new JButton(" ");
+     int rows = 4;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0272220d-5e7e-4658-b466-9cbad88deb74\" name=\"Changes\" comment=\"first commit and push\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Development\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XIzuJk83of8vQ41zLSHPz4Rvzf\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"Johans-Branch\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"GameInterface\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"GameInterface\" />\r\n      <module name=\"GameOfFifteen\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.GameInterface\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0272220d-5e7e-4658-b466-9cbad88deb74\" name=\"Changes\" comment=\"\" />\r\n      <created>1698331606786</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1698331606786</updated>\r\n      <workItem from=\"1698331607913\" duration=\"1271000\" />\r\n    </task>\r\n    <task id=\"LOCAL−00001\" summary=\"first commit and push\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1698331770104</created>\r\n      <option name=\"number\" value=\"LOCAL−00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00001\" />\r\n      <updated>1698331770104</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first commit and push\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"first commit and push\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,8 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first commit and push">
++    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first cast">
+       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameInterface.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -18,6 +19,9 @@
+         <option value="Class" />
+       </list>
+     </option>
++  </component>
++  <component name="Git.Merge.Settings">
++    <option name="BRANCH" value="Johans-Branch" />
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+@@ -41,7 +45,7 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "Johans-Branch",
++    "git-widget-placeholder": "Development",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+@@ -80,7 +84,14 @@
+       <option name="presentableId" value="LOCAL−00001" />
+       <updated>1698331770104</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL−00002" summary="first cast">
++      <option name="closed" value="true" />
++      <created>1698388123083</created>
++      <option name="number" value="LOCAL−00002" />
++      <option name="presentableId" value="LOCAL−00002" />
++      <updated>1698388123083</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -99,6 +110,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="first commit and push" />
+-    <option name="LAST_COMMIT_MESSAGE" value="first commit and push" />
++    <MESSAGE value="first cast" />
++    <option name="LAST_COMMIT_MESSAGE" value="first cast" />
+   </component>
+ </project>
+\ No newline at end of file

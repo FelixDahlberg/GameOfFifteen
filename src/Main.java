@@ -9,7 +9,7 @@ public class Main extends JFrame implements ActionListener {
     }
     
     northPanel northPanel = new northPanel();
-    JPanel centerPanel = new JPanel(new GridLayout(4,4));
+    centerPanel centerPanel = new centerPanel();
     southPanel southPanel = new southPanel();
     
     
@@ -21,6 +21,8 @@ public class Main extends JFrame implements ActionListener {
         add(southPanel, BorderLayout.SOUTH);
 
         northPanel.newGameButton.addActionListener(this);
+        northPanel.changeColorOnGameButton.addActionListener(this);
+        northPanel.changeColorOnNumbersButton.addActionListener(this);
         
         
         pack();
@@ -41,6 +43,25 @@ public class Main extends JFrame implements ActionListener {
             } else {
                 southPanel.running = true;
                 southPanel.timer.start();
+            }
+        }
+        if (e.getSource() == northPanel.changeColorOnGameButton) {
+            Color colorSelector = JColorChooser.showDialog(null, "Välj en färg på spelplanen", Color.BLACK);
+            if (colorSelector != null) {
+                northPanel.setBackground(colorSelector);
+                southPanel.setBackground(colorSelector);
+            }
+        }
+        if (e.getSource() == northPanel.changeColorOnNumbersButton) {
+            Color colorSelectorNumbers = JColorChooser.showDialog(null, "Välj en färg på brickorna", Color.WHITE);
+            if (colorSelectorNumbers != null) {
+                Component[] comps = centerPanel.getComponents();
+                for (Component comp : comps) {
+                    if (comp instanceof JButton) {
+                        JButton b = (JButton) comp;
+                        b.setBackground(colorSelectorNumbers);
+                    }
+                }
             }
         }
     }
