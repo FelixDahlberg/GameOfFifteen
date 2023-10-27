@@ -23,7 +23,9 @@ public class Main extends JFrame implements ActionListener {
         northPanel.newGameButton.addActionListener(this);
         northPanel.changeColorOnGameButton.addActionListener(this);
         northPanel.changeColorOnNumbersButton.addActionListener(this);
-        
+        centerPanel.dimensionArray[0][0].setText(" ");
+        centerPanel.dimensionArray[0][0].setVisible(false);
+        centerPanel.dimensionArray[0][1].addActionListener(this);
         
         pack();
         setLocationRelativeTo(null);
@@ -31,12 +33,14 @@ public class Main extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
+    public void updateMoveCounter(){
+        southPanel.moveCounter ++;
+        southPanel.moveCounterLabel.setText("Antal drag: " + southPanel.moveCounter);
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == northPanel.newGameButton){
-            southPanel.moveCounter ++;
-            southPanel.moveCounterPanel.setText(String.valueOf(southPanel.moveCounter));
             if (southPanel.timer.isRunning()) {
                 southPanel.timer.stop();
                 
@@ -63,6 +67,15 @@ public class Main extends JFrame implements ActionListener {
                         b.setBackground(colorSelectorNumbers);
                     }
                 }
+            }
+        }
+        if (e.getSource() == centerPanel.dimensionArray[0][1]){
+            if(centerPanel.dimensionArray[0][0].getText().equals(" ") ) {
+                centerPanel.dimensionArray[0][1].setText(" ");
+                centerPanel.dimensionArray[0][1].setVisible(false);
+                centerPanel.dimensionArray[0][0].setText("1");
+                centerPanel.dimensionArray[0][0].setVisible(true);
+                
             }
         }
     }

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first commit and push" />
+    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="la till så bakgrunden ändrades på centerpanel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/centerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/centerPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/southPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/southPanel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +105,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1698390506910</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="la till så bakgrunden ändrades på centerpanel">
+      <option name="closed" value="true" />
+      <created>1698390707558</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1698390707558</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +133,7 @@
     <MESSAGE value="first commit and push" />
     <MESSAGE value="jdk17 added" />
     <MESSAGE value="mergade våra projekt och snyggade till" />
-    <option name="LAST_COMMIT_MESSAGE" value="mergade våra projekt och snyggade till" />
+    <MESSAGE value="la till så bakgrunden ändrades på centerpanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="la till så bakgrunden ändrades på centerpanel" />
   </component>
 </project>
