@@ -23,9 +23,7 @@ public class Main extends JFrame implements ActionListener {
         northPanel.newGameButton.addActionListener(this);
         northPanel.changeColorOnGameButton.addActionListener(this);
         northPanel.changeColorOnNumbersButton.addActionListener(this);
-        centerPanel.dimensionArray[0][0].setText(" ");
-        centerPanel.dimensionArray[0][0].setVisible(false);
-        centerPanel.dimensionArray[0][1].addActionListener(this);
+
         
         pack();
         setLocationRelativeTo(null);
