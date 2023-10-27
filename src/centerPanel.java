@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 public class centerPanel extends JPanel implements ActionListener {
     
-    JButton emptyButton = new JButton(" ");
     int rows = 4;
     int colums = 4;
     JButton[][] dimensionArray = new JButton[rows][colums];
@@ -19,24 +18,14 @@ public class centerPanel extends JPanel implements ActionListener {
 
         setLayout(new GridLayout(4, 4));
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 16; i++) {
             JButton boardNumbers = new JButton(String.valueOf(i + 1));
             boardNumbers.setPreferredSize(new Dimension(80, 80));
             add(boardNumbers);
+            
 
         }
-
-
-        emptyButton.addActionListener(this);
-
-
-    }
-
-    private static void addButtonsToPanel(JPanel panel) {
-        for (int i = 0; i < panel.getComponentCount(); i++) {
-            JButton button = new JButton(String.valueOf(i + 1));
-            panel.add(button);
-        }
+        getComponent(0).setVisible(false);
     }
 
     public static void main(String[] args) {
