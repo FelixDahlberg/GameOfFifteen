@@ -98,6 +98,7 @@ public class Main extends JFrame implements ActionListener {
                  centerPanel.dimensionArray[a][b].setVisible(false);
              }
         }
+        
         if(b != 0){
            if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
                 centerPanel.dimensionArray[a][b - 1].setText(centerPanel.dimensionArray[a][b].getText());
