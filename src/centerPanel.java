@@ -4,10 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class centerPanel extends JPanel implements ActionListener {
-
+public class centerPanel extends JPanel {
     
-    JButton emptyButton = new JButton("hej");
     int rows = 4;
     int colums = 4;
     JButton[][] dimensionArray = new JButton[rows][colums];
@@ -36,29 +34,5 @@ public class centerPanel extends JPanel implements ActionListener {
                 numberOfButtons++;
             }
         }
-        
-
-        
-        emptyButton.addActionListener(this);
-
-
     }
-
-    private static void addButtonsToPanel(JPanel panel) {
-        for (int i = 0; i < panel.getComponentCount(); i++) {
-            JButton button = new JButton(String.valueOf(i + 1));
-            panel.add(button);
-        }
-    }
-
-    public static void main(String[] args) {
-        centerPanel g = new centerPanel();
-
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
-
 }
