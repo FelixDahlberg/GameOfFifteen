@@ -23,7 +23,9 @@ public class Main extends JFrame implements ActionListener {
         northPanel.newGameButton.addActionListener(this);
         northPanel.changeColorOnGameButton.addActionListener(this);
         northPanel.changeColorOnNumbersButton.addActionListener(this);
-
+        centerPanel.dimensionArray[0][0].setText(" ");
+        centerPanel.dimensionArray[0][0].setVisible(false);
+        centerPanel.dimensionArray[0][1].addActionListener(this);
         
         pack();
         setLocationRelativeTo(null);
@@ -48,7 +50,7 @@ public class Main extends JFrame implements ActionListener {
              } else {
                 southPanel.running = true;
                 southPanel.timer.start();
-            }*/
+            }
         }
         if (e.getSource() == northPanel.changeColorOnGameButton) {
             Color colorSelector = JColorChooser.showDialog(null, "Välj en färg på spelplanen", Color.BLACK);
