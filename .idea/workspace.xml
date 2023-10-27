@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="tog bort lite oanvänd kod">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="tog bort unused import statement">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/centerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/centerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/southPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/southPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +150,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1698410941014</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="tog bort unused import statement">
+      <option name="closed" value="true" />
+      <created>1698412935644</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1698412935644</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +183,7 @@
     <MESSAGE value="knapparna kan röra sig men det funkar inte bra" />
     <MESSAGE value="alla knappar rör sig som dom ska!!!!" />
     <MESSAGE value="tog bort lite oanvänd kod" />
-    <option name="LAST_COMMIT_MESSAGE" value="tog bort lite oanvänd kod" />
+    <MESSAGE value="tog bort unused import statement" />
+    <option name="LAST_COMMIT_MESSAGE" value="tog bort unused import statement" />
   </component>
 </project>

@@ -232,6 +232,8 @@ public class Main extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == northPanel.newGameButton) {
             shuffleGame();
+            southPanel.moveCounter = 0;
+            southPanel.moveCounterLabel.setText("Antal drag: " + southPanel.moveCounter);
             southPanel.seconds = 0;
             southPanel.timer.start();
 

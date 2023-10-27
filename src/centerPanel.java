@@ -29,7 +29,13 @@ public class centerPanel extends JPanel {
         for (JButton b:buttonList) {
             add(b);
         }
-        
+
+        for (JButton b:buttonList) {
+            if(b.getText().equals("16")){
+                b.setText(" ");
+                b.setVisible(false);
+            }
+        }
         
         int numberOfButtons = 0;
         for (int i = 0; i < rows; i++) {
@@ -38,7 +44,5 @@ public class centerPanel extends JPanel {
                 numberOfButtons++;
             }
         }
-        dimensionArray[3][3].setText(" ");
-        dimensionArray[3][3].setVisible(false);
     }
 }
