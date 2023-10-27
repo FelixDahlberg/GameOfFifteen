@@ -31,19 +31,22 @@ public class Main extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
+    public void shuffleGame(){
+        
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == northPanel.newGameButton){
-            southPanel.moveCounter ++;
+           /* southPanel.moveCounter ++;
             southPanel.moveCounterPanel.setText(String.valueOf(southPanel.moveCounter));
             if (southPanel.timer.isRunning()) {
                 southPanel.timer.stop();
-                
-            } else {
+
+             } else {
                 southPanel.running = true;
                 southPanel.timer.start();
-            }
+            }*/
         }
         if (e.getSource() == northPanel.changeColorOnGameButton) {
             Color colorSelector = JColorChooser.showDialog(null, "Välj en färg på spelplanen", Color.BLACK);
@@ -64,5 +67,6 @@ public class Main extends JFrame implements ActionListener {
                 }
             }
         }
+        
     }
 }
