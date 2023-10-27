@@ -9,7 +9,7 @@ public class Main extends JFrame implements ActionListener {
     }
     
     northPanel northPanel = new northPanel();
-    JPanel centerPanel = new JPanel(new GridLayout(4,4));
+    centerPanel centerPanel = new centerPanel();
     southPanel southPanel = new southPanel();
     
     
