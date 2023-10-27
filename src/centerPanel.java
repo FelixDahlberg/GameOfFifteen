@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class centerPanel extends JPanel implements ActionListener {
+
     
     JButton emptyButton = new JButton("hej");
     int rows = 4;

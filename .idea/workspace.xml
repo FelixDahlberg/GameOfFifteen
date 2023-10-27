@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="pull from development">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testClass.java" afterDir="false" />
-    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="first commit and push">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-27_08_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-10-27_08_30__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/centerPanel.java" afterDir="false" />
+    <list default="true" id="0272220d-5e7e-4658-b466-9cbad88deb74" name="Changes" comment="probleeeeem">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +18,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="Johans-Branch" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -48,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Johans-Branch",
+    "git-widget-placeholder": "AndreasBranch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,7 +52,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GameInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameInterface" />
       <module name="GameOfFifteen" />
@@ -64,8 +60,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="GameOfFifteen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="centerPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="centerPanel" />
+      <module name="GameOfFifteen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.centerPanel" />
+        <item itemvalue="Application.GameInterface" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.GameInterface" />
       </list>
     </recent_temporary>
@@ -87,7 +101,28 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1698331770104</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="jdk17 added">
+      <option name="closed" value="true" />
+      <created>1698388339876</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1698388339876</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Ändrade changeColorOnNumbers">
+      <option name="closed" value="true" />
+      <created>1698390446745</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1698390446745</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Ändrade lite i forloopen i centerPanel">
+      <option name="closed" value="true" />
+      <created>1698392896348</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1698392896348</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +141,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit and push" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit and push" />
+    <MESSAGE value="jdk17 added" />
+    <MESSAGE value="Ändrade changeColorOnNumbers" />
+    <MESSAGE value="Ändrade lite i forloopen i centerPanel" />
+    <MESSAGE value="probleeeeem" />
+    <option name="LAST_COMMIT_MESSAGE" value="probleeeeem" />
   </component>
 </project>

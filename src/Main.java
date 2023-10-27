@@ -37,14 +37,17 @@ public class Main extends JFrame implements ActionListener {
         southPanel.moveCounter ++;
         southPanel.moveCounterLabel.setText("Antal drag: " + southPanel.moveCounter);
     }
+    public void shuffleGame(){
+        
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == northPanel.newGameButton){
             if (southPanel.timer.isRunning()) {
                 southPanel.timer.stop();
-                
-            } else {
+
+             } else {
                 southPanel.running = true;
                 southPanel.timer.start();
             }
@@ -78,5 +81,6 @@ public class Main extends JFrame implements ActionListener {
                 
             }
         }
+        
     }
 }
