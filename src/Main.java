@@ -23,6 +23,7 @@ public class Main extends JFrame implements ActionListener {
         northPanel.changeColorOnGameButton.addActionListener(this);
         northPanel.changeColorOnNumbersButton.addActionListener(this);
 
+        southPanel.timer.start();
         centerPanel.dimensionArray[0][0].setText(" ");
         centerPanel.dimensionArray[0][0].setVisible(false);
 
@@ -61,72 +62,179 @@ public class Main extends JFrame implements ActionListener {
     }
 
     public void moveTile(int a, int b) {
-        if (a != 3) {
-            if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
-                centerPanel.dimensionArray[a][b - 1].setText(centerPanel.dimensionArray[a][b].getText());
-                centerPanel.dimensionArray[a][b - 1].setVisible(true);
-                centerPanel.dimensionArray[a][b].setText(" ");
-                centerPanel.dimensionArray[a][b].setVisible(false);
-            } else if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
-                centerPanel.dimensionArray[a][b + 1].setText(centerPanel.dimensionArray[a][b].getText());
-                centerPanel.dimensionArray[a][b + 1].setVisible(true);
-                centerPanel.dimensionArray[a][b].setText(" ");
-                centerPanel.dimensionArray[a][b].setVisible(false);
-            } else if(centerPanel.dimensionArray[a - 1][b].getText().equals(" ")){
-                centerPanel.dimensionArray[a - 1][b].setText(centerPanel.dimensionArray[a][b].getText());
-                centerPanel.dimensionArray[a - 1][b].setVisible(true);
-                centerPanel.dimensionArray[a][b].setText(" ");
-                centerPanel.dimensionArray[a][b].setVisible(false);
-            }
-        }
-        if (a != 0) {
-             if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
-                centerPanel.dimensionArray[a][b + 1].setText(centerPanel.dimensionArray[a][b].getText());
-                centerPanel.dimensionArray[a][b + 1].setVisible(true);
-                centerPanel.dimensionArray[a][b].setText(" ");
-                centerPanel.dimensionArray[a][b].setVisible(false);
-            } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
-                centerPanel.dimensionArray[a][b - 1].setText(centerPanel.dimensionArray[a][b].getText());
-                centerPanel.dimensionArray[a][b - 1].setVisible(true);
-                centerPanel.dimensionArray[a][b].setText(" ");
-                centerPanel.dimensionArray[a][b].setVisible(false);
-            }
-             else if (centerPanel.dimensionArray[a +1][b].getText().equals(" ")) {
-                 centerPanel.dimensionArray[a+1][b].setText(centerPanel.dimensionArray[a][b].getText());
-                 centerPanel.dimensionArray[a+1][b].setVisible(true);
-                 centerPanel.dimensionArray[a][b].setText(" ");
-                 centerPanel.dimensionArray[a][b].setVisible(false);
-             }
-        }
-        
-        if(b != 0){
-           if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
-                centerPanel.dimensionArray[a][b - 1].setText(centerPanel.dimensionArray[a][b].getText());
-                centerPanel.dimensionArray[a][b - 1].setVisible(true);
-                centerPanel.dimensionArray[a][b].setText(" ");
-                centerPanel.dimensionArray[a][b].setVisible(false);
-            }
-            else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
-                centerPanel.dimensionArray[a - 1][b].setText(centerPanel.dimensionArray[a][b].getText());
-                centerPanel.dimensionArray[a - 1][b].setVisible(true);
-                centerPanel.dimensionArray[a][b].setText(" ");
-                centerPanel.dimensionArray[a][b].setVisible(false);
-            }
-            if(b != 3){
-                if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
-                    centerPanel.dimensionArray[a][b - 1].setText(centerPanel.dimensionArray[a][b].getText());
-                    centerPanel.dimensionArray[a][b - 1].setVisible(true);
-                    centerPanel.dimensionArray[a][b].setText(" ");
-                    centerPanel.dimensionArray[a][b].setVisible(false);
-                }else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
-                    centerPanel.dimensionArray[a - 1][b].setText(centerPanel.dimensionArray[a][b].getText());
-                    centerPanel.dimensionArray[a - 1][b].setVisible(true);
-                    centerPanel.dimensionArray[a][b].setText(" ");
-                    centerPanel.dimensionArray[a][b].setVisible(false);
+        if (a - 1 == -1 || a + 1 == 4 || b - 1 == -1 || b + 1 == 4) {
+            if (a - 1 == -1) {
+                if (b - 1 == -1) {
+                    if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                        moveDown(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                        moveRight(a, b);
+                        updateMoveCounter();
+                    }
+                } else if (b + 1 == 4) {
+                    if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                        moveDown(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                        moveLeft(a, b);
+                        updateMoveCounter();
+                    }
+                } else {
+                    if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                        moveDown(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                        moveLeft(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                        moveRight(a, b);
+                        updateMoveCounter();
+                    }
                 }
+            }
+            if (a + 1 == 4) {
+                if (b - 1 == -1) {
+                    if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                        moveUp(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                        moveRight(a, b);
+                        updateMoveCounter();
+                    }
+                } else if (b + 1 == 4) {
+                    if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                        moveLeft(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                        moveUp(a, b);
+                        updateMoveCounter();
+                    }
+                } else {
+                    if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                        moveRight(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                        moveUp(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                        moveLeft(a, b);
+                        updateMoveCounter();
+                    }
+                }
+            }
+            if (b - 1 == -1) {
+                if (a + 1 == 4) {
+                    if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                        moveRight(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                        moveUp(a, b);
+                        updateMoveCounter();
+                    }
+                } else if (a - 1 == -1) {
+                    if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                        moveDown(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                        moveRight(a, b);
+                        updateMoveCounter();
+                    }
+                } else {
+                    if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                        moveDown(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                        moveRight(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                        moveUp(a, b);
+                        updateMoveCounter();
+                    }
+                }
+            }
+            if (b + 1 == 4) {
+                if (a - 1 == -1) {
+                    if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                        moveDown(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                        moveLeft(a, b);
+                        updateMoveCounter();
+                    }
+                } else if (a + 1 == 4) {
+                    if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                        moveUp(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                        moveLeft(a, b);
+                        updateMoveCounter();
+                    }
+                } else {
+                    if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                        moveDown(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                        moveUp(a, b);
+                        updateMoveCounter();
+                    } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                        moveLeft(a, b);
+                        updateMoveCounter();
+                    }
+                }
+            }
+        }else{
+            if (centerPanel.dimensionArray[a + 1][b].getText().equals(" ")) {
+                moveDown(a, b);
+                updateMoveCounter();
+            } else if (centerPanel.dimensionArray[a][b + 1].getText().equals(" ")) {
+                moveRight(a, b);
+                updateMoveCounter();
+            } else if (centerPanel.dimensionArray[a - 1][b].getText().equals(" ")) {
+                moveUp(a, b);
+                updateMoveCounter();
+            } else if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+                moveLeft(a, b);
+                updateMoveCounter();
             }
         }
     }
+
+    public void moveRight(int a, int b) {
+        centerPanel.dimensionArray[a][b + 1].setText(centerPanel.dimensionArray[a][b].getText());
+        centerPanel.dimensionArray[a][b + 1].setVisible(true);
+        centerPanel.dimensionArray[a][b].setText(" ");
+        centerPanel.dimensionArray[a][b].setVisible(false);
+    }
+
+    public void moveLeft(int a, int b) {
+        centerPanel.dimensionArray[a][b - 1].setText(centerPanel.dimensionArray[a][b].getText());
+        centerPanel.dimensionArray[a][b - 1].setVisible(true);
+        centerPanel.dimensionArray[a][b].setText(" ");
+        centerPanel.dimensionArray[a][b].setVisible(false);
+    }
+
+    public void moveUp(int a, int b) {
+        centerPanel.dimensionArray[a - 1][b].setText(centerPanel.dimensionArray[a][b].getText());
+        centerPanel.dimensionArray[a - 1][b].setVisible(true);
+        centerPanel.dimensionArray[a][b].setText(" ");
+        centerPanel.dimensionArray[a][b].setVisible(false);
+    }
+
+    public void moveDown(int a, int b) {
+        centerPanel.dimensionArray[a + 1][b].setText(centerPanel.dimensionArray[a][b].getText());
+        centerPanel.dimensionArray[a + 1][b].setVisible(true);
+        centerPanel.dimensionArray[a][b].setText(" ");
+        centerPanel.dimensionArray[a][b].setVisible(false);
+    }
+    
+    
+     /*if (centerPanel.dimensionArray[a][b - 1].getText().equals(" ")) {
+        centerPanel.dimensionArray[a][b - 1].setText(centerPanel.dimensionArray[a][b].getText());
+        centerPanel.dimensionArray[a][b - 1].setVisible(true);
+        centerPanel.dimensionArray[a][b].setText(" ");
+        centerPanel.dimensionArray[a][b].setVisible(false);
+    }*/
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -144,7 +252,6 @@ public class Main extends JFrame implements ActionListener {
             if (colorSelector != null) {
                 northPanel.setBackground(colorSelector);
                 centerPanel.setBackground(colorSelector);
-                southPanel.setBackground(colorSelector);
             }
         }
         if (e.getSource() == northPanel.changeColorOnNumbersButton) {
